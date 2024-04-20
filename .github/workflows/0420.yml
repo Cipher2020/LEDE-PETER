@@ -69,9 +69,9 @@ jobs:
 
     - name: Update feeds
       run: |
-        script/feeds clean
-        script/feeds update -a
-        script/feeds install -a  #删掉feeds重建一下
+        ./script/feeds clean
+        ./script/feeds update -a
+        ./script/feeds install -a  #删掉feeds重建一下
         cd openwrt && ./scripts/feeds update -a
 
     - name: Install feeds
